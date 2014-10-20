@@ -1,14 +1,15 @@
-package fireproject;
-
 public class Grid extends FireProject { 
   static int grid [][];
   Burning burn;
   double probBurning;
   double probTree;
   
-  public Grid(){
-    
-  }
+  public Grid(int a,int b, double c, double d){
+    probBurning=c;  probTree=d;
+    this.grid = new int [a+2][b+2];
+    burn = new Burning(a,b);
+    reset();    
+  }  
   public void setprobBurning(double a){
     probBurning=a;
   } 
